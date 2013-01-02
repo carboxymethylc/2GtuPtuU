@@ -93,11 +93,22 @@
     galleryImagePickerController.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
     
     [cameraFilterView setUserInteractionEnabled:TRUE];
+    
     [tiltshift_top_line setUserInteractionEnabled:TRUE];
     [tiltshift_bottom_line setUserInteractionEnabled:TRUE];
     
     [self addGestureRecognizersToPiece:tiltshift_top_line];
     [self addGestureRecognizersToPiece:tiltshift_bottom_line];
+
+    
+    [tiltshift_left_line setUserInteractionEnabled:TRUE];
+    [tiltshift_right_line setUserInteractionEnabled:TRUE];
+
+    
+    [self addGestureRecognizersToPiece:tiltshift_left_line];
+    [self addGestureRecognizersToPiece:tiltshift_right_line];
+
+    
     
     
     
@@ -849,7 +860,17 @@
     
     int selected_line;
     
-    if(piece.tag == 2003)
+    if(piece.tag == 2001)
+    {
+        second_view = [self.view viewWithTag:2002];
+        selected_line = 1;
+    }
+    else if(piece.tag == 2002)
+    {
+        second_view = [self.view viewWithTag:2001];
+        selected_line = 2;
+    }
+    else if(piece.tag == 2003)
     {
         second_view = [self.view viewWithTag:2004];
         selected_line = 3;
@@ -878,8 +899,35 @@
         CGFloat cty=[piece center].y + translation.y;
         // if(cx >55 && cy >55 && ctx <240 && cty <240)
         
-       
-        if(selected_line == 3)
+       if(selected_line ==1)
+       {
+           if(ctx < cx)
+           {
+               [piece setCenter:CGPointMake(ctx,cy)];
+           }
+           
+           else if(piece.frame.origin.x+20<=second_view.frame.origin.x)
+           {
+               [piece setCenter:CGPointMake(ctx,cy)];
+           }
+
+       }
+        else if(selected_line ==2)
+        {
+            
+            
+            if(ctx < cx && piece.frame.origin.x-20>=second_view.frame.origin.x)
+            {
+                [piece setCenter:CGPointMake(ctx,cy)];
+            }
+            else if(ctx>cx)
+            {
+                [piece setCenter:CGPointMake(ctx,cy)];
+            }
+
+            
+        }
+        else if(selected_line == 3)
         {
             if(cty < cy)
             {
@@ -894,12 +942,13 @@
         }
         else if(selected_line == 4)
         {
-         //
-            if(cty < cy)
+            NSLog(@"piece.frame.origin.y = %f",piece.frame.origin.y);
+            NSLog(@"second_view.frame.origin.y = %f",second_view.frame.origin.y);
+            if(cty < cy && piece.frame.origin.y-20>=second_view.frame.origin.y)
             {
                 [piece setCenter:CGPointMake(cx,cty)];
             }
-            else if(piece.frame.origin.y-20<=second_view.frame.origin.y)
+            else if(cty > cy && cty<360)
             {
                 [piece setCenter:CGPointMake(cx,cty)];
             }
@@ -907,11 +956,8 @@
         
         [gestureRecognizer setTranslation:CGPointZero inView:[piece superview]];
     }
-    
     else
     {
-        
-        
         NSLog(@"\n end state");
     }
 }

@@ -48,7 +48,7 @@
 								<string key="NSFrame">{{2, 116}, {320, 5}}</string>
 								<reference key="NSSuperview" ref="233164324"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="41491273"/>
+								<reference key="NSNextKeyView" ref="52921374"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -63,11 +63,38 @@
 								<string key="NSFrame">{{0, 211}, {320, 5}}</string>
 								<reference key="NSSuperview" ref="233164324"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="317719395"/>
+								<reference key="NSNextKeyView" ref="966001641"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUIImage" ref="236247535"/>
+							</object>
+							<object class="IBUIImageView" id="966001641">
+								<reference key="NSNextResponder" ref="233164324"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{11, 3}, {3, 320}}</string>
+								<reference key="NSSuperview" ref="233164324"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="317719395"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<object class="NSCustomResource" key="IBUIImage" id="87377854">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">line_vertical.png</string>
+								</object>
+							</object>
+							<object class="IBUIImageView" id="52921374">
+								<reference key="NSNextResponder" ref="233164324"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{215, 0}, {3, 320}}</string>
+								<reference key="NSSuperview" ref="233164324"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="41491273"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUIImage" ref="87377854"/>
 							</object>
 						</array>
 						<string key="NSFrameSize">{320, 369}</string>
@@ -857,6 +884,22 @@
 					<int key="connectionID">110</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">tiltshift_left_line</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="966001641"/>
+					</object>
+					<int key="connectionID">115</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">tiltshift_right_line</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="52921374"/>
+					</object>
+					<int key="connectionID">116</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">galler_button_pressed:</string>
 						<reference key="source" ref="564924123"/>
@@ -1048,6 +1091,8 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="656121704"/>
 							<reference ref="41491273"/>
+							<reference ref="966001641"/>
+							<reference ref="52921374"/>
 						</array>
 						<reference key="parent" ref="774585933"/>
 					</object>
@@ -1199,6 +1244,16 @@
 						<reference key="object" ref="41491273"/>
 						<reference key="parent" ref="233164324"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">113</int>
+						<reference key="object" ref="966001641"/>
+						<reference key="parent" ref="233164324"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">114</int>
+						<reference key="object" ref="52921374"/>
+						<reference key="parent" ref="233164324"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1208,6 +1263,8 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="107.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="108.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="113.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="114.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="13.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1242,7 +1299,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">112</int>
+			<int key="maxID">116</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1496,10 +1553,10 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">line.png</string>
-			<string key="NS.object.0">{320, 3}</string>
-		</object>
+		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="line.png">{320, 3}</string>
+			<string key="line_vertical.png">{3, 320}</string>
+		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1926</string>
 	</data>
 </archive>

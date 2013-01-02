@@ -187,6 +187,7 @@
 		46D70AE5166387B500534037 /* GPUImageTiltShiftFilterVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D70AE4166387B500534037 /* GPUImageTiltShiftFilterVertical.m */; };
 		46D70AEA1663880600534037 /* FBLikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D70AE81663880600534037 /* FBLikeViewController.m */; };
 		46D70AEB1663880600534037 /* FBLikeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46D70AE91663880600534037 /* FBLikeViewController.xib */; };
+		46E14D7C1693CAD1009DA839 /* line_vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E14D7B1693CAD1009DA839 /* line_vertical.png */; };
 		46EF23D71663931A00D8D30D /* ImageEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EF23D51663931A00D8D30D /* ImageEditingViewController.m */; };
 		46EF23D81663931A00D8D30D /* ImageEditingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46EF23D61663931A00D8D30D /* ImageEditingViewController.xib */; };
 		BCB5E7ED14E605A900701302 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB5E7EC14E605A900701302 /* UIKit.framework */; };
@@ -574,6 +575,7 @@
 		46D70AE71663880600534037 /* FBLikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLikeViewController.h; sourceTree = "<group>"; };
 		46D70AE81663880600534037 /* FBLikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLikeViewController.m; sourceTree = "<group>"; };
 		46D70AE91663880600534037 /* FBLikeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBLikeViewController.xib; sourceTree = "<group>"; };
+		46E14D7B1693CAD1009DA839 /* line_vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_vertical.png; sourceTree = "<group>"; };
 		46EF23D41663931A00D8D30D /* ImageEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditingViewController.h; sourceTree = "<group>"; };
 		46EF23D51663931A00D8D30D /* ImageEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditingViewController.m; sourceTree = "<group>"; };
 		46EF23D61663931A00D8D30D /* ImageEditingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageEditingViewController.xib; sourceTree = "<group>"; };
@@ -693,6 +695,7 @@
 		46964897168A18B6001FEB01 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				46E14D7B1693CAD1009DA839 /* line_vertical.png */,
 				46964898168A18B6001FEB01 /* line.png */,
 			);
 			path = images;
@@ -1213,6 +1216,7 @@
 				46EF23D81663931A00D8D30D /* ImageEditingViewController.xib in Resources */,
 				464A7C1C1676B6EF00EF3017 /* frame.png in Resources */,
 				46964899168A18B6001FEB01 /* line.png in Resources */,
+				46E14D7C1693CAD1009DA839 /* line_vertical.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
